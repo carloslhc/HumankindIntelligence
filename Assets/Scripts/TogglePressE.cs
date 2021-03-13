@@ -14,7 +14,11 @@ public class TogglePressE : MonoBehaviour
 
 
     public GameObject uiText;
-    public TextMeshProUGUI 
+
+
+    Animator animator;
+
+    public ButtonRayCast[] button;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +28,19 @@ public class TogglePressE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (displayToggle && Input.ge)
+        if (displayToggle && Input.GetKeyDown(KeyCode.E))
         {
+            if (button.Length > 0)
+            {
+                for(int i = 0; i < button.Length; i++)
+                {
+                    Debug.Log("PRESSED E");
 
+                    ButtonRayCast el = button[i];
+                    el.playAnimation();
+                }
+               // button.playAnimation();
+            }
         }
     }
     private void OnTriggerEnter(Collider other)
