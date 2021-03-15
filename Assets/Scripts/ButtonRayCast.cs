@@ -20,9 +20,8 @@ public class ButtonRayCast : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        RaycastHit hit;
-        Physics.Raycast(transform.position, new Vector3(0,0,-range));
-        Debug.DrawRay(transform.position, new Vector3(0, 0, -range), Color.green);
+        // Physics.Raycast(transform.position, new Vector3(0,0,-range));
+        // Debug.DrawRay(transform.position, new Vector3(0, 0, -range), Color.green);
     }
 
     public void playAnimation()
